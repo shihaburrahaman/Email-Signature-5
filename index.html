@@ -1,0 +1,98 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Signature 4</title>
+</head>
+<body>
+    <center>
+        <div class="panel panel-info">	
+            <div id="signature-preview-workspace" class="panel-body">				
+                
+        
+                <div class="hidden-xs hidden-sm hidden-md" style="position:absolute; right:30px; margin-top:-40px">		
+                    <a ng-show="$prevCtrl.hasDarkMode()" href="javascript:void(0);" data-toggle="modal" data-target="#darkModePrev"></a>
+                </div>	
+            
+                <div><!-- ngInclude: --><ng-include id="signaturePreview" src="selectedTemplatePath" class="ng-scope"><!--UNCOMMENT <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+        <HTML><HEAD><TITLE>Email Signature</TITLE>
+        <META content="text/html; charset=utf-8" http-equiv=Content-Type></HEAD>
+        <BODY style="font-size: 10pt; font-family: {{fontFamily}};">UNCOMMENT-->
+        
+        <table cellspacing="0" cellpadding="0" border="0" style="FONT-FAMILY: Arial, sans-serif; COLOR: #05385f;max-width:500px;" class="ng-scope">
+          <tbody>
+            <tr>
+                <td colspan="2" width="500" style="padding-bottom: 4px; border-bottom: 1px solid #05385f">
+                    <span style="FONT-SIZE: 18pt; COLOR: #c40209; FONT-FAMILY: Arial, sans-serif;"><strong class="ng-binding">Shihaur Rahaman</strong></span>
+                    <!-- ngIf: isAnyFieldEntered('title, website') --><span ng-if="isAnyFieldEntered('title, website')" class="ng-scope"><br></span><!-- end ngIf: isAnyFieldEntered('title, website') -->
+                    <!-- ngIf: showField('title') --><span ng-if="showField('title')" style="font-size: 10pt; color: #05385f;" class="ng-binding ng-scope">Sales &amp; Marketing Director <!-- ngIf: showField('website') --><span ng-if="showField('website')" class="ng-scope"> | </span><!-- end ngIf: showField('website') --></span><!-- end ngIf: showField('title') -->
+                    <!-- ngIf: showField('website') --><span ng-if="showField('website')" class="ng-scope">
+                        <a href="http://www.prcfoundation.com" target="_blank" rel="noopener" style="font-size: 10pt; color: #c40209 !important; text-decoration:none; font-weight: bold;" class="ng-binding">www.prcfoundation.com</a>
+                    </span><!-- end ngIf: showField('website') -->
+                </td>
+            </tr>
+            <tr>
+                <!-- ngIf: showField('photo') --><td ng-if="showField('photo')" width="120" style="padding-top: 12px;" class="ng-scope">
+                    <p style="padding: 0px; margin: 0px;">
+                <img border="0" ng-src="https://raw.githubusercontent.com/shihaburrahaman/Image-Gallary/main/man.png" alt="Photo" width="90" style="max-width:90px; height:auto; border:0;" src="https://raw.githubusercontent.com/shihaburrahaman/Image-Gallary/main/man.png">
+                    </p>
+                </td><!-- end ngIf: showField('photo') -->
+                <td style="padding-top: 15px;">
+                    <!-- ngIf: showField('phone') --><p ng-if="showField('phone')" style="line-height: 12px; padding-bottom: 2px; margin-bottom: 0px; padding-top: 0px; margin-top: 0px;" class="ng-scope"><span style="font-size: 9pt; color: #05385f; font-weight: bold;">T:</span> <span style="font-size: 9pt; color: #101010" class="ng-binding">01740168745</span></p><!-- end ngIf: showField('phone') -->
+                    <!-- ngIf: showField('mobile') --><p ng-if="showField('mobile')" style="line-height: 12px; padding-bottom: 2px; margin-bottom: 0px; padding-top: 0px; margin-top: 0px;" class="ng-scope"><span style="font-size: 9pt; color: #05385f; font-weight: bold;">M:</span> <span style="font-size: 9pt; color: #101010" class="ng-binding">01706721688</span></p><!-- end ngIf: showField('mobile') -->
+                    <!-- ngIf: showField('email') --><p ng-if="showField('email')" style="line-height: 12px; padding-bottom: 2px; margin-bottom: 0px; padding-top: 0px; margin-top: 0px;" class="ng-scope"><span style="font-size: 9pt; color: #05385f; font-weight: bold;">E:</span> <a href="mailto:john.doe@my-company.com" style="text-decoration: none; font-size: 9pt; color: #101010" class="ng-binding">john.doe@my-company.com</a></p><!-- end ngIf: showField('email') -->
+                    
+                    <!-- ngIf: isAnyFieldEntered('company, address1, address2') --><p ng-if="isAnyFieldEntered('company, address1, address2')" style="line-height: 12px; padding-bottom: 2px; margin-bottom: 0px; padding-top: 0px; margin-top: 0px;" class="ng-scope">
+                        <span style="font-size: 9pt; color: #05385f; font-weight: bold;">A:</span> 
+                        <!-- ngIf: showField('company') --><span ng-if="showField('company')" style="font-size: 9pt; color: #101010; font-weight: bold;" class="ng-binding ng-scope">PRC Foundaton</span><!-- end ngIf: showField('company') --> 
+                        <!-- ngIf: showField('address1') --><span ng-if="showField('address1')" style="font-size: 9pt; color: #101010" class="ng-binding ng-scope">Halfrasta, Natore</span><!-- end ngIf: showField('address1') --><!-- ngIf: showField('address1') --><span ng-if="showField('address1')" style="font-size: 9pt; color: #101010" class="ng-scope">, </span><!-- end ngIf: showField('address1') -->
+                        <!-- ngIf: showField('address2') --><span style="font-size: 9pt; color: #101010" ng-if="showField('address2')" class="ng-binding ng-scope">Singra, Natore</span><!-- end ngIf: showField('address2') -->
+                    </p><!-- end ngIf: isAnyFieldEntered('company, address1, address2') -->
+                    
+                    <p style="margin-bottom: 0px; padding-bottom: 0px; padding-top: 5px; margin-top: 5px;">
+                        <!-- ngIf: showField('facebookURL') --><span ng-if="showField('facebookURL')" class="ng-scope"><a href="https://www.facebook.com/srsarker622" target="_blank" rel="noopener"><img border="0" width="20" ng-src="https://www.mail-signatures.com/signature-generator/img/templates/4th-july-2022-1/fb.png" alt="facebook icon" style="border:0; height:20px; width:20px" src="https://www.mail-signatures.com/signature-generator/img/templates/4th-july-2022-1/fb.png"></a>&nbsp;</span><!-- end ngIf: showField('facebookURL') -->
+                        <!-- ngIf: showField('twitterURL') --><span ng-if="showField('twitterURL')" class="ng-scope"><a href="https://twitter.com/ShihaburRaham12" target="_blank" rel="noopener"><img border="0" width="20" ng-src="https://www.mail-signatures.com/signature-generator/img/templates/4th-july-2022-1/tt.png" alt="twitter icon" style="border:0; height:20px; width:20px" src="https://www.mail-signatures.com/signature-generator/img/templates/4th-july-2022-1/tt.png"></a>&nbsp;</span><!-- end ngIf: showField('twitterURL') -->
+                        <!-- ngIf: showField('youtubeURL') --><span ng-if="showField('youtubeURL')" class="ng-scope"><a href="https://www.youtube.com/channel/UCZ9yEcdrQGPbL8HGZuVQMjg" target="_blank" rel="noopener"><img border="0" width="20" ng-src="https://www.mail-signatures.com/signature-generator/img/templates/4th-july-2022-1/yt.png" alt="youtube icon" style="border:0; height:20px; width:20px" src="https://www.mail-signatures.com/signature-generator/img/templates/4th-july-2022-1/yt.png"></a>&nbsp;</span><!-- end ngIf: showField('youtubeURL') -->
+                        <!-- ngIf: showField('linkedinURL') --><span ng-if="showField('linkedinURL')" class="ng-scope"><a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-join" target="_blank" rel="noopener"><img border="0" width="20" ng-src="https://www.mail-signatures.com/signature-generator/img/templates/4th-july-2022-1/ln.png" alt="linkedin icon" style="border:0; height:20px; width:20px" src="https://www.mail-signatures.com/signature-generator/img/templates/4th-july-2022-1/ln.png"></a>&nbsp;</span><!-- end ngIf: showField('linkedinURL') -->
+                        <!-- ngIf: showField('instagramURL') --><span ng-if="showField('instagramURL')" class="ng-scope"><a href="https://www.instagram.com/" target="_blank" rel="noopener"><img border="0" width="20" ng-src="https://www.mail-signatures.com/signature-generator/img/templates/4th-july-2022-1/it.png" alt="instagram icon" style="border:0; height:20px; width:20px" src="https://www.mail-signatures.com/signature-generator/img/templates/4th-july-2022-1/it.png"></a>&nbsp;</span><!-- end ngIf: showField('instagramURL') -->
+                        <!-- ngIf: showField('pinterestURL') --><span ng-if="showField('pinterestURL')" class="ng-scope"><a href="https://pinterest.com/" target="_blank" rel="noopener"><img border="0" width="20" ng-src="https://www.mail-signatures.com/signature-generator/img/templates/4th-july-2022-1/pt.png" alt="pinterest icon" style="border:0; height:20px; width:20px" src="https://www.mail-signatures.com/signature-generator/img/templates/4th-july-2022-1/pt.png"></a></span><!-- end ngIf: showField('pinterestURL') -->		
+                    </p>
+                </td>
+            </tr>
+            <!-- ngIf: showField('banner') --><tr ng-if="showField('banner')" class="ng-scope">
+                <td colspan="2" style="padding-top:25px; margin-bottom:0;">
+                    <!-- ngIf: showField('bannerURL') --><a ng-if="showField('bannerURL')" href="https://www.codetwo.com/email-signatures/" target="_blank" rel="noopener" class="ng-scope"><img border="0" ng-src="https://www.mail-signatures.com/signature-generator/img/templates/4th-july-2022-1/banner.png" alt="Banner" width="500" style="max-width:500px; height:auto; border:0;" src="https://www.mail-signatures.com/signature-generator/img/templates/4th-july-2022-1/banner.png"></a><!-- end ngIf: showField('bannerURL') -->
+                    <!-- ngIf: !showField('bannerURL') -->
+                </td>
+            </tr><!-- end ngIf: showField('banner') -->
+            <!-- ngIf: showField('disclaimer') -->
+          </tbody>
+        </table>
+        
+        
+        <!--UNCOMMENT 
+        </BODY>
+        </HTML>UNCOMMENT-->  </ng-include></div>
+            </div>
+        
+                <div class="hidden-lg text-center">		
+                    <a ng-show="$prevCtrl.hasDarkMode()" href="javascript:void(0);" data-toggle="modal" data-target="#darkModePrev"></a>
+                </div>
+                
+            <div id="darkModePrev" class="modal fade" tabindex="-1" role="dialog">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    
+                    <div class="modal-footer">
+                        
+                  </div>
+                  
+                </div>
+              </div>
+            </div>	
+            
+        </div>
+    </center>
+
+</body>
+</html>
